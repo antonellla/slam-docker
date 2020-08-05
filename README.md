@@ -2,9 +2,9 @@
 Dockerfiles for various SLAM frameworks.
 
 
-## ORBSLAM2
+## ORB_SLAM2
 
-Docker image for running ORBSLAM2 based on Ubuntu 16.04 and ROS Kinetic with OpenCV3
+Docker image for running ORB_SLAM2 based on Ubuntu 16.04 and ROS Kinetic with OpenCV3
 
 Build and tag: `docker build - < Dockerfile -t orbslam2:latest`
 
@@ -16,3 +16,12 @@ docker run -it --rm -e DISPLAY=$DISPLAY --network host -v /host/path:/container/
 
 
 Note: this does not currently work with Pangolin Viewer due to some X11 issue. Giving docker access to x-server via `xhost +local:docker` does not work, nor do any of the fixes in the Pangolin Github issue tracker. Only works with ROS for now.
+
+
+## LSD SLAM
+
+Docker image for running LSD SLAM based on Ubuntu 14.04 and ROS Indigo
+
+Build and tag: `docker build - < Dockerfile -t lsdslam:latest`
+
+Run: todo

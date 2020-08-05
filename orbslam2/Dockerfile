@@ -1,4 +1,4 @@
-## ORBSLAM2 with ROS Kinetic Dockerfile based off of OSRF Dockerfile
+## Dockerfile for ORB_SLAM2 on Ubuntu 18.04 with ROS Kinetic
 
 # Ubuntu 16.04 base image with ROS Kinetic
 FROM ros:kinetic-ros-base-xenial
@@ -9,10 +9,10 @@ RUN apt-get update && apt-get upgrade -y
 
 # Install bootstrap tools & other dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    python-rosdep \
-    python-rosinstall \
-    python-vcstools \
+	build-essential \
+	python-rosdep \
+	python-rosinstall \
+	python-vcstools \
 	wget \
 	git \
 	vim \
@@ -23,14 +23,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libgl1-mesa-dev \
 	libglew-dev=1.13.0-2* \
 	libpython2.7-dev \
-    && rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/*
 
 
 # Install ROS Kinetic base and perception packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ros-kinetic-ros-base=1.3.2-0* \
+	ros-kinetic-ros-base=1.3.2-0* \
 	ros-kinetic-perception=1.3.2-0* \
-    && rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/*
 
 
 # Install Pangolin

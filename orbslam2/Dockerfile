@@ -1,4 +1,4 @@
-## Dockerfile for ORB_SLAM2 on Ubuntu 18.04 with ROS Kinetic
+## Dockerfile for ORB_SLAM2 on Ubuntu 16.04 with ROS Kinetic
 
 # Ubuntu 16.04 base image with ROS Kinetic
 FROM ros:kinetic-ros-base-xenial

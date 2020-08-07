@@ -6,7 +6,9 @@ Dockerfiles for various SLAM frameworks.
 
 Docker image for running ORB_SLAM2 based on Ubuntu 16.04 and ROS Kinetic with OpenCV3
 
-Build and tag: `docker build - < Dockerfile -t orbslam2:latest`
+Pull from dockerhub: `docker pull awilby/orbslam2`
+
+Or, build from Dockerfile: `docker build - < Dockerfile -t orbslam2:latest`
 
 Run without network isolation between container and host so host can see ROS nodes. Also, mount a volume (e.g. containing datasets) by editing fields after -v flag:
 
